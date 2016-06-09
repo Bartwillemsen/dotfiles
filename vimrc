@@ -37,40 +37,19 @@ set expandtab
 set showtabline=4
 set ruler
 
-" More common settings.
-set encoding=utf-8
-set scrolloff=3
+" Set UTF-8
+set enc=utf-8
+set fenc=utf-8
+set termencoding=utf-8
+
+" Other common settings
 set autoindent
-set showmode
-set showcmd
-set hidden
-set wildmenu
-set wildmode=list:longest
-set visualbell
+set smartindent
 
-set history=1000
-set undolevels=10000
-
-set nobackup
-set noswapfile
-
-set cursorline
-set ttyfast
-set ruler
-set backspace=indent,eol,start
-
-set pastetoggle=<F2>
+set showmatch
 set number
-set norelativenumber
 
-set undofile
-set undodir=/tmp
-
-set lazyredraw
-set matchtime=3
-
-set colorcolumn=120
-highlight ColorColumn ctermbg=darkgrey
+set comments=s1:/**,mb:\ *,elx:\ */
 
 syntax enable
 set background=dark
@@ -86,3 +65,6 @@ se hlsearch
 " Ctrl-L clears the highlight from the last search
 noremap <C-l> :nohlsearch<CR><C-l>
 noremap! <C-l> <ESC>:nohlsearch<CR><C-l>
+
+" goto definition with F12
+map <F12> <C-]>
